@@ -1,16 +1,30 @@
 import WeatherContext from "../context/WeatherContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import "../App.css";
 
 function CurrentWeather() {
 
   const { activeWeather } = useContext(WeatherContext)
 
+
   return (
-    <div>
-      {activeWeather.date} <br />
-      {activeWeather.humidity} <br />
-      {activeWeather.avgTemp} <br />
-      {activeWeather.rainRange} <br />
+    <div className="currentContainer">
+      <ul>
+        <li>
+          {activeWeather.date}
+        </li>
+        <li>
+          Humidity: {activeWeather.humidity} %
+        </li>
+        <li>
+          Average Temperature: {activeWeather.avgTemp} °C
+        </li>
+        <li>
+          Precipitation Rate: {activeWeather.rainRange} %
+        </li>
+
+      </ul>
+
     </div>
   )
 }

@@ -6,7 +6,7 @@ const WeatherContext = createContext();
 export const WeatherProvider = ({ children }) => {
 
   const [weather, setWeather] = useState([])
-  const [activeWeather, setActiveWeather] = useState({ date: "", humidity: "", avgTemp: "", rainRange: "", hours: "", icons: "" })
+  const [activeWeather, setActiveWeather] = useState({ date: "", humidity: "", avgTemp: "", rainRange: "", hours: [] })
 
   async function getData(city) {
     const data = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=641a1cf9fdd641f0b61214511222803&q=${city}&days=7&aqi=no&alerts=no`)

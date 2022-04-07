@@ -26,7 +26,6 @@ button {
 }
 
 .weatherListContainer {
-  margin-top: 100px;
   min-width: 1000px;
   display: grid;
   place-items: center;
@@ -47,4 +46,30 @@ button {
   margin-right: 10px;
   text-align: center;
   padding-top: 40px;
+}
+
+.currentContainer {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  margin-top: 50px;
+  background-color: cadetblue;
+}
+
+.currentContainer ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.currentContainer ul li {
+  margin-top: 10px;
+}
+
+.iconBox {
+  display: flex;
+}
+
+.paginationContainer {
+  display: grid;
+  place-items: center;
 }
