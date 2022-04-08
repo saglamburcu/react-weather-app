@@ -4,23 +4,22 @@ import "../App.css";
 
 function CurrentWeather() {
 
-  const { activeWeather, changeDate } = useContext(WeatherContext)
-
+  const { activeWeather, weather, setActiveWeather, changeDate } = useContext(WeatherContext)
 
   return (
     <div className="currentList">
       <ul>
         <li>
-          {changeDate(activeWeather.date)}
+          <h3><b>{changeDate(activeWeather.date)}</b></h3>
         </li>
         <li>
-          Humidity: {activeWeather.humidity} %
+          <h4><b>Humidity: {activeWeather.humidity} % </b></h4>
         </li>
         <li>
-          Average Temperature: {activeWeather.avgTemp} °C
+          <h4><b>Average Temperature: {activeWeather.avgTemp} °C</b></h4>
         </li>
         <li>
-          Precipitation Rate: {activeWeather.rainRange} %
+          <h4><b>Precipitation Rate: {activeWeather.rainRange} %</b></h4>
         </li>
       </ul>
     </div>

@@ -11,7 +11,6 @@ function WeatherList() {
     setSelectWeather(index)
   }
 
-
   return (
     <div className="weatherListContainer">
       <div className="weatherList">
