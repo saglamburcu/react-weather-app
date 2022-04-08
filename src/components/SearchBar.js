@@ -6,7 +6,7 @@ import "../App.css"
 
 function SearchBar() {
   const { getData } = useContext(WeatherContext)
-  const [c, setC] = useState("izmir")
+  const [cityName, setCityName] = useState("izmir")
 
   const { handleSubmit, handleChange, values } = useFormik({
     initialValues: {
@@ -14,7 +14,7 @@ function SearchBar() {
     },
     onSubmit: (() => (
       getData(values.city),
-      setC(values.city),
+      setCityName(values.city),
       values.city = ""
     ))
   })
@@ -29,7 +29,7 @@ function SearchBar() {
           placeholder="Please write a city name..."
         />
         <button className="button" type="submit">Search</button>
-        <h1><b>{c.toUpperCase()} WEATHER FORECAST</b></h1>
+        <h1><b>{cityName.toUpperCase()} WEATHER FORECAST</b></h1>
 
       </form>
     </>

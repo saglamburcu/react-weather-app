@@ -24,7 +24,8 @@ function WeatherList() {
               <h3>{changeDate(item.date)}</h3>
               <img src={item.day.condition.icon} alt="" />
               <h4>{item.day.condition.text}</h4>
-              <div>Max: {item.day.maxtemp_c} °C / Min: {item.day.mintemp_c} °C</div>
+              <h4>Max: {item.day.maxtemp_c} °C </h4>
+              <h4>Min: {item.day.mintemp_c} °C</h4>
             </div>
           ))
         }
