@@ -6,8 +6,8 @@ import WeatherContext from "../context/WeatherContext";
 function PaginationButton() {
   const { activeWeather } = useContext(WeatherContext)
 
-  const [indexOfFirstIcon, setIndexOfFirstIcon] = useState(10)
-  const [indexOfLastIcon, setIndexOfLastIcon] = useState(17)
+  const [indexOfFirstIcon, setIndexOfFirstIcon] = useState(9)
+  const [indexOfLastIcon, setIndexOfLastIcon] = useState(16)
 
   let icons = activeWeather.hours.slice(indexOfFirstIcon, indexOfLastIcon)
 
@@ -24,13 +24,12 @@ function PaginationButton() {
 
   return (
     <div className="paginationContainer">
-
       <Pagination size='lg'>
         <Pagination.Prev onClick={onPrevButton} />
         <li className="iconBox">
           {icons.map((hour, index) => (
             <div key={index} >
-              <img src={hour.condition.icon} alt="#" /> <br />
+              <img src={hour.condition.icon} alt="#" />
               <span>{hour.time.slice(11, 16)}</span>
             </div>
           ))}

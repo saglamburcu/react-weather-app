@@ -17,7 +17,7 @@ function SearchBar() {
   return (
     <form onSubmit={handleSubmit}>
       <input name="city" value={values.city} onChange={handleChange} placeholder="Please write a city name." />
-      <button type="submit">Search</button>
+      <button className="button" type="submit">Search</button>
     </form>
   )
 }

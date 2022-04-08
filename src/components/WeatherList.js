@@ -1,21 +1,31 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import WeatherContext from "../context/WeatherContext"
 import "../App.css"
 
 function WeatherList() {
-  const { weather, setActiveWeather } = useContext(WeatherContext)
+  const { weather, changeWeather, changeDate } = useContext(WeatherContext)
+  const [selectWeather, setSelectWeather] = useState(1)
+
+  const onChange = (index, item) => {
+    changeWeather({ date: item.date, humidity: item.day.avghumidity, avgTemp: item.day.avgtemp_c, rainRange: item.day.daily_chance_of_rain, hours: item.hour })
+    setSelectWeather(index)
+  }
+
 
   return (
     <div className="weatherListContainer">
       <div className="weatherList">
-
         {
-          weather.map(item => (
-            <div className="weather" key={item.date} onClick={() => setActiveWeather({ date: item.date, humidity: item.day.avghumidity, avgTemp: item.day.avgtemp_c, rainRange: item.day.daily_chance_of_rain, hours: item.hour })}>
-              <h3>{item.date}</h3>
+          weather.map((item, index) => (
+            <div
+              key={item.date}
+              className={`${index === selectWeather ? "weather selected" : "weather"}`}
+              onClick={() => onChange(index, item)}>
+
+              <h3>{changeDate(item.date)}</h3>
               <img src={item.day.condition.icon} alt="" />
               <h4>{item.day.condition.text}</h4>
-              <div>Max: {item.day.maxtemp_c} / Min: {item.day.mintemp_c}</div>
+              <div>Max: {item.day.maxtemp_c} °C / Min: {item.day.mintemp_c} °C</div>
             </div>
           ))
         }

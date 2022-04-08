@@ -1,28 +1,40 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Nunito', sans-serif;
+  color:rgb(77, 72, 72)
 }
+
 
 form {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
+}
+
+.bigContainer {
+  width: 1300px;
+  height: 650px;
+  margin: auto;
 }
 
 input{
-  width: 500px;
-  height: 30px;
+  width: 720px;
+  height: 40px;
   border: 3px solid rgb(138, 224, 198);
   border-radius: 10px;
+  padding-left: 10px;
 }
 
-button {
+.button {
   color: white;
-  height: 35px;
-  background-color: rgb(240, 173, 236);
+  height: 60px;
+  width: 60px;
+  background-color: rgb(167, 145, 165);
   border: none;
-  border-radius: 10px;
+  border-radius: 100%;
+  box-shadow: 2px 0px 23px -1px rgba(0,0,0,0.25);
   margin-left: 20px;
-  padding: 2px 20px;
+  padding: 2px 5px;
 }
 
 .weatherListContainer {
@@ -33,27 +45,31 @@ button {
 
 .weatherList {
   width: 1000px;
-  height: 200px;
-  background-color: aqua;
+  height: 250px;
+  margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .weather {
   width: 200px;
-  height: 160px;
-  background-color: blueviolet;
-  margin-right: 10px;
+  height: 250px;
+  background-color: rgb(195, 218, 215);
   text-align: center;
-  padding-top: 40px;
+  padding-top: 30px;
+  border-radius: 15px;
+  box-shadow: 2px 0px 23px -1px rgba(0,0,0,0.45);
 }
 
 .currentContainer {
-  display: grid;
-  place-items: center;
-  width: 100vw;
+  width: 800px;
   margin-top: 50px;
-  background-color: cadetblue;
+  background-color: rgb(241, 216, 233);
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px;
+  box-shadow: 2px 0px 23px -1px rgba(0,0,0,0.45);
+  padding: 10px;
 }
 
 .currentContainer ul {
@@ -67,9 +83,17 @@ button {
 
 .iconBox {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .paginationContainer {
   display: grid;
   place-items: center;
 }
+
+.selected {
+  background-color: #fff;
+  box-shadow: 1px 2px 56px 2px rgba(238, 225, 45, 0.89);
+}
+
+/* (87, 216, 177, 0.76) */
