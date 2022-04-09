@@ -1,4 +1,4 @@
-# WEATHER APP
+# WEATHER APP 🌦️
 
 In this weather app, 3 days' weather data has been taken from the  Weather API. The weather information of the desired city can be accessed. You can click on a day to see the detailed weather report. In the detailed weather report, 24-hour weather information can be accessed.
 

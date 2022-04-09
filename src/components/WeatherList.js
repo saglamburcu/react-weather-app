@@ -4,7 +4,7 @@ import "../App.css"
 
 function WeatherList() {
   const { weather, changeWeather, changeDate } = useContext(WeatherContext)
-  const [selectWeather, setSelectWeather] = useState(1)
+  const [selectWeather, setSelectWeather] = useState(0)
 
   const onChange = (index, item) => {
     changeWeather({ date: item.date, humidity: item.day.avghumidity, avgTemp: item.day.avgtemp_c, rainRange: item.day.daily_chance_of_rain, hours: item.hour })

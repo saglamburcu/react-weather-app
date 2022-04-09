@@ -4,7 +4,7 @@ import "../App.css";
 
 function CurrentWeather() {
 
-  const { activeWeather, weather, setActiveWeather, changeDate } = useContext(WeatherContext)
+  const { activeWeather, changeDate } = useContext(WeatherContext)
 
   return (
     <div className="currentList">
